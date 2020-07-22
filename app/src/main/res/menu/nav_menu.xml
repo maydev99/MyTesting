@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/adderFragment"
+        android:icon="@drawable/ic_baseline_add_circle_outline_24"
+        android:orderInCategory="1"
+        android:title="@string/adder"
+        app:showAsAction="ifRoom">
+
+    </item>
+
+
+    <item
+        android:id="@+id/myListFragment"
+        android:icon="@drawable/ic_baseline_format_list_bulleted_24"
+        android:orderInCategory="2"
+        android:title="@string/list"
+        app:showAsAction="ifRoom">
+
+    </item>
+
+    <item
+        android:id="@+id/settingsFragment"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:orderInCategory="3"
+        android:title="@string/settings"
+        app:showAsAction="ifRoom">
+
+    </item>
+
+</menu>

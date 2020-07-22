@@ -1,0 +1,19 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="@string/settings"
+        app:allowDividerBelow="true"
+        android:layout="@layout/preference_category_title">
+
+        <SeekBarPreference
+            app:title="Max Number"
+            app:key="max_number"
+            app:summary="Set the max number in the Number Pickers"
+            app:showSeekBarValue="true"
+            android:progress="20"
+            android:max="499"
+            app:min="0"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

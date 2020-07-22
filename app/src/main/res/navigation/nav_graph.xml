@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/adderFragment">
+
+    <fragment
+        android:id="@+id/adderFragment"
+        android:name="com.bombadu.mytesting.ui.AdderFragment"
+        android:label="fragment_adder"
+        tools:layout="@layout/fragment_adder" />
+    <fragment
+        android:id="@+id/myListFragment"
+        android:name="com.bombadu.mytesting.ui.MyListFragment"
+        android:label="fragment_my_list"
+        tools:layout="@layout/fragment_my_list" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.bombadu.mytesting.ui.SettingsFragment"
+        android:label="SettingsFragment" />
+</navigation>
