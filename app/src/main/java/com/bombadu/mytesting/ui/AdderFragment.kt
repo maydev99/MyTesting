@@ -28,7 +28,6 @@ class AdderFragment : Fragment(), NumberPicker.OnValueChangeListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)//Don't Forget This for the Options Menu****
-
     }
 
     override fun onCreateView(
@@ -37,6 +36,7 @@ class AdderFragment : Fragment(), NumberPicker.OnValueChangeListener {
     ): View? {
 
         // Inflate the layout for this fragment
+
         return inflater.inflate(R.layout.fragment_adder, container, false)
     }
 
@@ -44,8 +44,6 @@ class AdderFragment : Fragment(), NumberPicker.OnValueChangeListener {
         super.onViewCreated(view, savedInstanceState)
         setupNumberPickers()
         myViewModel = ViewModelProvider(this).get(MyViewModel::class.java)
-
-
     }
 
 
@@ -138,6 +136,8 @@ class AdderFragment : Fragment(), NumberPicker.OnValueChangeListener {
         myViewModel.insertData(newData)
 
     }
+
+
 
 
 }

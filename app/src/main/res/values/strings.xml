@@ -21,4 +21,7 @@
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
     <string name="save">Save</string>
     <string name="delete_all">Delete All</string>
+    <string name="_3_28_pm">3:28 PM</string>
+    <string name="_1_1">1/1</string>
+    <string name="_245">245</string>
 </resources>
