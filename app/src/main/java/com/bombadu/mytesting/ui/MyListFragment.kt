@@ -15,6 +15,7 @@ import kotlinx.android.synthetic.main.fragment_my_list.*
 
 class MyListFragment : Fragment() {
 
+
     private val adapter = MyAdapter()
     lateinit var myViewModel: MyViewModel
 
@@ -27,21 +28,19 @@ class MyListFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_my_list, container, false)
     }
 
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         setupRecyclerView()
         getDataList()
     }
-
 
 
     private fun getDataList() {
         myViewModel.getAllData().observe(viewLifecycleOwner,
         Observer { list ->
             list?.let {
-                adapter.setDatas(it)
-                adapter.notifyDataSetChanged()
+                adapter.submitList(it)
+
             }
         })
 
@@ -51,9 +50,9 @@ class MyListFragment : Fragment() {
         recycler_view.layoutManager = LinearLayoutManager(this.context)
         recycler_view.setHasFixedSize(true)
         recycler_view.adapter = adapter
-        myViewModel = ViewModelProvider(this).get(MyViewModel::class.java)
+        this.myViewModel = ViewModelProvider(this).get(MyViewModel::class.java)
         myViewModel.getAllData().observe(viewLifecycleOwner, Observer { allData ->
-            allData?.let { adapter.setDatas(it) }
+            allData?.let { adapter.submitList(it) }
         })
 
         ItemTouchHelper(object :

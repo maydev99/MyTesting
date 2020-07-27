@@ -12,5 +12,28 @@ class MyData(
 ) {
     @PrimaryKey(autoGenerate = true)
     var id: Int = 0
-    
+
+    override fun equals(other: Any?): Boolean {
+        if(javaClass != other?.javaClass) {
+            return false
+        }
+
+        other as MyData
+        if (id != other.id){
+            return false
+        }
+
+        if (date != other.date) {
+            return false
+        }
+
+        if (time != other.time) {
+            return false
+        }
+
+        if (number != other.number) {
+            return false
+        }
+        return true
+    }
 }
