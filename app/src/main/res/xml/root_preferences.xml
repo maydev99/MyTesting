@@ -12,7 +12,7 @@
             app:showSeekBarValue="true"
             android:progress="20"
             android:max="499"
-            app:min="0"/>
+            app:min="20"/>
 
     </PreferenceCategory>
 

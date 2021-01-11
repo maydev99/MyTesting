@@ -52,6 +52,8 @@ class AdderFragment : Fragment(), NumberPicker.OnValueChangeListener {
         numPicker1.maxValue = numberMax
         numPicker2.minValue = 0
         numPicker2.maxValue = numberMax
+        numPicker1.value = 11
+        numPicker2.value = 11
         numPicker1.setOnValueChangedListener(this)
         numPicker2.setOnValueChangedListener(this)
 
